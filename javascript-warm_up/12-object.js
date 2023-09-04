@@ -1,5 +1,8 @@
 #!/usr/bin/node
-const s = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-for (let i = 0; i < 3; i++) {
-    console.log(s[i]);
-}
+const myObject = {
+    type: 'object',
+    value: 12
+};
+console.log(myObject);
+myObject.value = 89;
+console.log(myObject);
