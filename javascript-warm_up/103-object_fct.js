@@ -9,7 +9,7 @@ const myObject = {
 };
 console.log(myObject);
 
-myObject.incr = function incr () {
+myObject.incr = function () {
   myObject.value += 1;
 };
 
