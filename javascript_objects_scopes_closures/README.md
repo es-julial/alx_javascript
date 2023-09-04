@@ -56,7 +56,7 @@
 
 <h3>Intro session for this project</h3>
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Oj5HFfHKBTQ?si=lPTXJbCp-qfZx2rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span><a href="https://www.youtube-nocookie.com/embed/Oj5HFfHKBTQ?si=lPTXJbCp-qfZx2rc" title="YouTube video player"> Video Here</a></span>
 
   </div>
 </div>
