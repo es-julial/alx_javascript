@@ -1,19 +1,16 @@
 #!/usr/bin/node
-const fs = require('fs');
 const request = require('request');
-
-const url = process.argv[2];
-const fileName = process.argv[3];
-
-request(url, (error, response, body) => {
-    if (error) {
-        console.error(error);
+request(process.argv[2], function (error, response, body) {
+    if (!error) {
+        const todos = JSON.parse(body);
+        const completed = {};
+        todos.forEach((todo) => {
+            if (todo.completed && completed[todo.userId] === undefined) {
+                completed[todo.userId] = 1;
+            } else if (todo.completed) {
+                completed[todo.userId] += 1;
+            }
+        });
+        console.log(completed);
     }
-    const data = body;
-
-    fs.writeFile(fileName, data, 'utf-8', (err) => {
-        if (err) {
-            console.log(err);
-        }
-    });
 });
