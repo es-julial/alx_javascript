@@ -1,10 +1,11 @@
 # Javascript advanced
 
-![screenshot](https://zupimages.net/up/23/37/o2zu.png)
+![screenshot](https://zupimages.net/up/23/37/bgr4.png)
 
-      
+  
 
-<div class="panel panel-default" id="project-description">
+
+      <div class="panel panel-default" id="project-description">
   <div class="panel-body">
     <h2>Resources</h2>
 
@@ -43,10 +44,5 @@
   </div>
 </div>
 
-<h3>Intro Session for this project</h3>
-
-
-<p><a href="https://www.youtube-nocookie.com/embed/KfsMYfjjtDU?si=ivSZtUuS8wi6pfJB" title="YouTube video player" target="_blank">Video Here</a></p>
-
-  </div>
-</div>
+![screenshot2](https://zupimages.net/up/23/37/5rj2.png)
+![screenshot3](https://zupimages.net/up/23/37/sfzj.png)
