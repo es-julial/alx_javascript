@@ -54,5 +54,5 @@
 |
 -----
 |
-![screenshot3](https://zupimages.net/up/23/38/s5va.png)
+![screenshot4](https://zupimages.net/up/23/38/go45.gif)
 |
