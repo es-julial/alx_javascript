@@ -42,12 +42,12 @@
 </ol>
 
 <h3>Intro Session for this project</h3>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_SVFNgK5v9E?si=69GA9wlAoKFRsiwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+<span><a href="https://www.youtube.com/embed/_SVFNgK5v9E?si=69GA9wlAoKFRsiwk" title="YouTube video player"> Video Here</a></span>
+</div>
+<div>
 <h3>Live Learning Session for this Project</h3>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wp1RzgBccwk?si=MjHwHABdajFz6S_v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span><a href="https://www.youtube.com/embed/wp1RzgBccwk?si=MjHwHABdajFz6S_v" title="YouTube video player"> Video Here</a></span>
+<div>/
 
 <h2>Requirements</h2>
 
@@ -64,10 +64,4 @@
 </div>
 
 <div>
-<h3>Intro Session for this project</h3>
-<span><a href="https://www.youtube.com/embed/_SVFNgK5v9E?si=69GA9wlAoKFRsiwk" title="YouTube video player"> Video Here</a></span>
-</div>
-<div>
-<h3>Live Learning Session for this Project</h3>
-<span><a href="https://www.youtube.com/embed/wp1RzgBccwk?si=MjHwHABdajFz6S_v" title="YouTube video player"> Video Here</a></span>
-<div>/
+
