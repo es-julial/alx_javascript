@@ -1,58 +1,48 @@
+// Get references to form elements
+const dynamicForm = document.getElementById("dynamic-form");
+const numFieldsSelect = document.getElementById("numFields");
+const inputContainer = document.getElementById("inputContainer");
 
+// Function to generate dynamic input fields
+function generateInputFields(selectedValue) {
+  // Clear any existing input fields
+  inputContainer.innerHTML = "";
 
-
-function generateInputFields(numFields) {
-  
-    const inputContainer = document.getElementById("inputContainer");
-    
-
-    inputContainer.innerHTML = "";
-    
-   
-    for (let i = 1; i <= numFields; i++) {
-        const input = document.createElement("input");
-        input.type = "text";
-        input.name = `field${i}`; 
-        input.placeholder = `Field ${i}`;
-        inputContainer.appendChild(input);
-    }
+  // Generate the specified number of input fields
+  for (let i = 1; i <= selectedValue; i++) {
+    const inputField = document.createElement("input");
+    inputField.type = "text";
+    inputField.name = `field${i}`;
+    inputField.placeholder = `Field ${i}`;
+    inputContainer.appendChild(inputField);
+  }
 }
 
+// Function to validate the form before submission
+function validateForm(event) {
+  // Retrieve the selected value from the dropdown
+  const selectedValue = parseInt(numFieldsSelect.value);
 
-function validateForm() {
-  
-    const numFieldsSelect = document.getElementById("numFields");
-    const numFields = parseInt(numFieldsSelect.value);
-    
+  // Loop through the dynamically generated input fields
+  for (let i = 1; i <= selectedValue; i++) {
+    const fieldName = `field${i}`;
+    const inputField = document.getElementsByName(fieldName)[0];
 
-    const inputContainer = document.getElementById("inputContainer");
-    
-   
-    const inputFields = inputContainer.querySelectorAll("input[type='text']");
-    
-
-    for (let i = 0; i < inputFields.length; i++) {
-        if (inputFields[i].value.trim() === "") {
-            alert("Please fill in all fields.");
-            return false;
-        }
+    // Check if any field is empty
+    if (inputField.value === "") {
+      // Prevent form submission
+      event.preventDefault();
+      alert("Please fill in all fields.");
+      return; // Exit the loop early
     }
-    
-    return true; 
+  }
 }
 
-
-const dynamicForm = document.getElementById("dynamicForm");
-dynamicForm.addEventListener("submit", function (event) {
- 
-    const numFieldsSelect = document.getElementById("numFields");
-    const numFields = parseInt(numFieldsSelect.value);
-    
-
-    generateInputFields(numFields);
-    
-    
-    if (!validateForm()) {
-        event.preventDefault(); 
-    }
+// Add an event listener to the dropdown menu to generate fields dynamically
+numFieldsSelect.addEventListener("change", function () {
+  const selectedValue = parseInt(numFieldsSelect.value);
+  generateInputFields(selectedValue);
 });
+
+// Add an event listener to the form to validate before submission
+dynamicForm.addEventListener("submit", validateForm);

@@ -1,31 +1,27 @@
+// Get references to the form and error message elements
+const emailForm = document.getElementById("emailForm");
+const emailInput = document.getElementById("email");
+const errorElement = document.getElementById("error");
 
+// Function to validate the email format
+function validateEmail(event) {
+  // Get the entered email value
+  const email = emailInput.value;
 
-function validateEmail() {
+  // Regular expression to check email format
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    const emailInput = document.getElementById("email");
-
-
-    const errorElement = document.getElementById("error");
-
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
- 
-    const email = emailInput.value;
-
-    
-    if (!emailRegex.test(email)) {
-        errorElement.textContent = "Please enter a valid email address.";
-        return false; 
-    } else {
-        errorElement.textContent = ""; 
-        return true;
-    }
+  // Check if the email format is correct
+  if (!emailRegex.test(email)) {
+    // Prevent form submission
+    event.preventDefault();
+    // Display error message
+    errorElement.textContent = "Please enter a valid email address.";
+  } else {
+    // Clear any previous error messages
+    errorElement.textContent = "";
+  }
 }
 
-
-const emailForm = document.getElementById("emailForm");
-emailForm.addEventListener("submit", function (event) {
-    if (!validateEmail()) {
-        event.preventDefault(); 
-    }
-});
+// Add a submit event listener to the form
+emailForm.addEventListener("submit", validateEmail);

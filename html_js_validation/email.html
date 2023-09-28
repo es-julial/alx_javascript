@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="email-validation.js"></script>
-
-    <title>1. Form Validation - Email Validation</title>
+    <title>Email Validation</title>
+    <style>
+      .error {
+        border: 2px solid red;
+      }
+    </style>
 </head>
 <body>
-    <form id="emailForm" onsubmit="return validateEmail();">
+    <form id="emailForm" novalidate>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <button type="submit">Submit</button>
+        <p id="error" style="color: red;"></p>
+    </form>
 
-  <label for="email">Email:</label>
-  <input type="text" id="email" name="email">
-  <button type="submit">Submit</button>
-  <p id="error" style="color: red;"></p>
-</form>
+    <script src="1-email-validation.js"></script>
 </body>
 </html>
